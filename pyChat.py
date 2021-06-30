@@ -49,7 +49,7 @@ def binWord(word):
     master = ""
     for letter in word:
         temp = bin(ord(letter))[2:]
-        while len(temp) < 7:
+        while len(temp) < 16:
             temp = '0' + temp
         master = master + temp
     return master
@@ -75,8 +75,8 @@ def refract(binary):
 
     """
     master = ""
-    for x in range(0, int(len(binary) / 7)):
-        master += chr(int(binary[x * 7: (x + 1) * 7], 2) + 0)
+    for x in range(0, int(len(binary) / 16)):
+        master += chr(int(binary[x * 16: (x + 1) * 16], 2) + 0)
     return master
 
 
